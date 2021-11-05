@@ -13,8 +13,14 @@
   left: -2rem;
   box-shadow: 0 2px 4px #444;
 }
+
 .masthead > h1 {
   flex-basis: 38vw;
   flex-grow: 0;
   flex-shrink: 1;
+}
+
+.masthead > h1 > a {
+  text-decoration: none;
+  color: #fff;
 }
