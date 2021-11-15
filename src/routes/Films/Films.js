@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink, Routes, Route } from "react-router-dom";
+import { NavLink, Route } from "react-router-dom";
 import Film from "../../components/Film/Film";
 import styles from "./Films.module.css";
 
@@ -42,11 +42,9 @@ export default function Films() {
         ))}
       </div>
       <div className="details">
-        <Routes>
-          <Route path="/films/:id">
-            <Film />
-          </Route>
-        </Routes>
+        <Route path="/films/:id">
+          <Film />
+        </Route>
       </div>
     </>
   );
