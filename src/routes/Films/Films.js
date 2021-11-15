@@ -24,6 +24,11 @@ export default function Films() {
     })();
   }, []);
 
+  const findFilm = (id) => {
+    const film = films.find((film, index) => parseInt(id) === index + 1);
+    return film;
+  };
+
   return (
     <>
       <div className={styles.results}>
@@ -43,7 +48,7 @@ export default function Films() {
       </div>
       <div className="details">
         <Route path="/films/:id">
-          <Film />
+          <Film findFilm={findFilm} />
         </Route>
       </div>
     </>

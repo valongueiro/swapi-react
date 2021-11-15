@@ -1,3 +1,11 @@
 .results {
   flex-basis: 30%;
 }
+
+a {
+  color: gold;
+}
+
+.activeLink {
+  color: orangered;
+}
