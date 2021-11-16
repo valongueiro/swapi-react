@@ -1,5 +1,4 @@
-import { NavLink, Route } from "react-router-dom";
-import Person from "../../components/Person/Person";
+import { NavLink } from "react-router-dom";
 import styles from "./People.module.css";
 
 export default function People({ people }) {
@@ -19,11 +18,6 @@ export default function People({ people }) {
             </NavLink>
           </p>
         ))}
-      </div>
-      <div className="details">
-        <Route path="/people/:id">
-          <Person people={people} />
-        </Route>
       </div>
     </>
   );

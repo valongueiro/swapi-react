@@ -4,6 +4,7 @@ import Home from "../../routes/Home/Home";
 import Films from "../../routes/Films/Films";
 import Film from "../Film/Film";
 import People from "../../routes/People/People";
+import Person from "../Person/Person";
 import Planets from "../../routes/Planets/Planets";
 import styles from "./Main.module.css";
 
@@ -12,7 +13,7 @@ export default function Main() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    if (pathname === "/people") {
+    if (pathname.indexOf("/people") > -1) {
       (async function () {
         const url = "https://swapi.dev/api/people/";
         const response = await fetch(url);
@@ -39,6 +40,10 @@ export default function Main() {
         {/* PEOPLE */}
         <Route path="/people">
           <People people={people} />
+
+          <Route path="/people/:id">
+            <Person people={people} />
+          </Route>
         </Route>
         {/* PLANETS */}
         <Route path="/planets">
